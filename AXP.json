@@ -1,0 +1,105 @@
+{
+  "name" : "work search",
+  "title" : "jobs manager",
+  "databases" : [{
+    "ver" : 2,
+    "name" : "jobs",
+    "stores" : [{
+      "title":'Sites',
+      "class":'DC_jobsSites',
+      "name":"sites",
+      "fields" : [{
+        "title" : "url",
+        "name" : "url",
+        "type" : "varchar(128)",
+        "uniq" : true
+      },{
+        "title" : "Name",
+        "name" : "name",
+        "type" : "varchar(128)"
+      }]
+    },{
+      "title":'Words',
+      "class":'DC_jobsWords',
+      "name":"words",
+      "fields" : [{
+        "title" : "word",
+        "name" : "word",
+        "type" : "varchar(128)",
+        "uniq" : true
+      },{
+        "title" : "word formats",
+        "name" : "word_formats",
+        "type" : "Array<varchar(128)>",
+      }]
+    },{
+      "title":'Agents',
+      "class":'DC_jobsAgents',
+      "name":"agents",
+      "fields" : [{
+        "title" : "Name",
+        "name" : "name",
+        "type" : "varchar(128)"
+      },{
+        "title" : "Phone",
+        "name" : "phone",
+        "type" : "varchar(128)"
+      },{
+        "title" : "E-mail",
+        "name" : "email",
+        "type" : "varchar(128)"
+      },{
+        "title" : "Company",
+        "name" : "company",
+        "type" : "foreign",
+        "store" : "companies",
+        "database" : "jobs",
+        "field" : "name"
+      }]
+    },{
+      "title":'Companies',
+      "class":'DC_jobsCompanies',
+      "name":"companies",
+      "fields" : [{
+        "title" : "Url",
+        "name" : "url",
+        "type" : "varchar(128)",
+        "uniq" : true
+      },{
+        "title" : "Phone",
+        "name" : "phone",
+        "type" : "varchar(128)"
+      },{
+        "title" : "Name",
+        "name" : "name",
+        "type" : "varchar(128)"
+      },{
+        "title" : "Address",
+        "name" : "address",
+        "type" : "varchar(256)"
+      },{
+        "title" : "About",
+        "name" : "about",
+        "type" : "text"
+      }]
+    },{
+      "title":'Ads',
+      "class":'DC_jobsAds',
+      "name":"ads",
+      "fields" : [{
+        "title" : "Url",
+        "name" : "url",
+        "type" : "varchar(256)",
+        "uniq" : true
+      },{
+        "title" : "Title",
+        "name" : "title",
+        "type" : "varchar(256)"
+      },{
+        "title" : "Body",
+        "name" : "body",
+        "type" : "varchar(256)"
+      }]
+    }]
+  }]
+}
