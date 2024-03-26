@@ -2,11 +2,12 @@
   "name" : "work search",
   "title" : "jobs manager",
   "databases" : [{
-    "ver" : 2,
+    "ver" : 3,
     "name" : "jobs",
     "stores" : [{
       "title":'Sites',
       "class":'DC_jobsSites',
+      "icon":'DC_jobsSites_icon',
       "name":"sites",
       "fields" : [{
         "title" : "url",
@@ -21,6 +22,7 @@
     },{
       "title":'Words',
       "class":'DC_jobsWords',
+      "icon":'DC_jobsWords_icon',
       "name":"words",
       "fields" : [{
         "title" : "word",
@@ -35,6 +37,7 @@
     },{
       "title":'Agents',
       "class":'DC_jobsAgents',
+      "icon":'DC_jobsAgents_icon',
       "name":"agents",
       "fields" : [{
         "title" : "Name",
@@ -59,6 +62,7 @@
     },{
       "title":'Companies',
       "class":'DC_jobsCompanies',
+      "icon":'DC_jobsCompanies_icon',
       "name":"companies",
       "fields" : [{
         "title" : "Url",
@@ -85,6 +89,7 @@
     },{
       "title":'Ads',
       "class":'DC_jobsAds',
+      "icon":'DC_jobsAds_icon',
       "name":"ads",
       "fields" : [{
         "title" : "Url",
@@ -99,6 +104,20 @@
         "title" : "Body",
         "name" : "body",
         "type" : "varchar(256)"
+      },{
+        "title" : "Company",
+        "name" : "company",
+        "type" : "foreign",
+        "store" : "companies",
+        "database" : "jobs",
+        "field" : "name"
+      },{
+        "title" : "Agent",
+        "name" : "agent",
+        "type" : "foreign",
+        "store" : "agents",
+        "database" : "jobs",
+        "field" : "name"
       }]
     }]
   }]
