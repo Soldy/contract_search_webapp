@@ -5,9 +5,9 @@
     "ver" : 3,
     "name" : "jobs",
     "stores" : [{
-      "title":'Sites',
-      "class":'DC_jobsSites',
-      "icon":'DC_jobsSites_icon',
+      "title":"Sites",
+      "class":"DC_jobsSites",
+      "icon":"DC_jobsSites_icon",
       "name":"sites",
       "fields" : [{
         "title" : "url",
@@ -20,9 +20,9 @@
         "type" : "varchar(128)"
       }]
     },{
-      "title":'Words',
-      "class":'DC_jobsWords',
-      "icon":'DC_jobsWords_icon',
+      "title":"Words",
+      "class":"DC_jobsWords",
+      "icon":"DC_jobsWords_icon",
       "name":"words",
       "fields" : [{
         "title" : "word",
@@ -32,12 +32,12 @@
       },{
         "title" : "word formats",
         "name" : "word_formats",
-        "type" : "Array<varchar(128)>",
+        "type" : "Array<varchar(128)>"
       }]
     },{
-      "title":'Agents',
-      "class":'DC_jobsAgents',
-      "icon":'DC_jobsAgents_icon',
+      "title":"Agents",
+      "class":"DC_jobsAgents",
+      "icon":"DC_jobsAgents_icon",
       "name":"agents",
       "fields" : [{
         "title" : "Name",
@@ -60,9 +60,9 @@
         "field" : "name"
       }]
     },{
-      "title":'Companies',
-      "class":'DC_jobsCompanies',
-      "icon":'DC_jobsCompanies_icon',
+      "title":"Companies",
+      "class":"DC_jobsCompanies",
+      "icon":"DC_jobsCompanies_icon",
       "name":"companies",
       "fields" : [{
         "title" : "Url",
@@ -87,9 +87,9 @@
         "type" : "text"
       }]
     },{
-      "title":'Ads',
-      "class":'DC_jobsAds',
-      "icon":'DC_jobsAds_icon',
+      "title":"Ads",
+      "class":"DC_jobsAds",
+      "icon":"DC_jobsAds_icon",
       "name":"ads",
       "fields" : [{
         "title" : "Url",
