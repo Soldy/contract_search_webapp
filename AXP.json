@@ -11,13 +11,15 @@
       "name":"sites",
       "fields" : [{
         "title" : "url",
-        "name" : "url",
-        "type" : "varchar(128)",
-        "uniq" : true
+        "name"  : "url",
+        "type"  : "varchar(128)",
+        "uniq"  : true,
+        "table" : true
       },{
         "title" : "Name",
-        "name" : "name",
-        "type" : "varchar(128)"
+        "name"  : "name",
+        "type"  : "varchar(128)",
+        "table" : true
       }]
     },{
       "title":"Words",
@@ -28,11 +30,13 @@
         "title" : "word",
         "name" : "word",
         "type" : "varchar(128)",
-        "uniq" : true
+        "uniq" : true,
+        "table" : false
       },{
         "title" : "word formats",
         "name" : "word_formats",
-        "type" : "Array<varchar(128)>"
+        "type" : "Array<varchar(128)>",
+        "table" : false
       }]
     },{
       "title":"Agents",
@@ -42,22 +46,26 @@
       "fields" : [{
         "title" : "Name",
         "name" : "name",
-        "type" : "varchar(128)"
+        "type" : "varchar(128)",
+        "table" : true
       },{
         "title" : "Phone",
         "name" : "phone",
-        "type" : "varchar(128)"
+        "type" : "varchar(128)",
+        "table" : true
       },{
         "title" : "E-mail",
         "name" : "email",
-        "type" : "varchar(128)"
+        "type" : "varchar(128)",
+        "table" : true
       },{
         "title" : "Company",
         "name" : "company",
         "type" : "foreign",
         "store" : "companies",
         "database" : "jobs",
-        "field" : "name"
+        "field" : "name",
+        "table" : true
       }]
     },{
       "title":"Companies",
@@ -65,18 +73,21 @@
       "icon":"DC_jobsCompanies_icon",
       "name":"companies",
       "fields" : [{
+        "title" : "Name",
+        "name" : "name",
+        "type" : "varchar(128)",
+        "table" : true
+      },{
         "title" : "Url",
         "name" : "url",
         "type" : "varchar(128)",
-        "uniq" : true
+        "uniq" : true,
+        "table" : true
       },{
         "title" : "Phone",
         "name" : "phone",
-        "type" : "varchar(128)"
-      },{
-        "title" : "Name",
-        "name" : "name",
-        "type" : "varchar(128)"
+        "type" : "varchar(128)",
+        "table" : true
       },{
         "title" : "Address",
         "name" : "address",
@@ -99,25 +110,36 @@
       },{
         "title" : "Title",
         "name" : "title",
-        "type" : "varchar(256)"
-      },{
-        "title" : "Body",
-        "name" : "body",
-        "type" : "varchar(256)"
+        "type" : "varchar(256)",
+        "table" : true
       },{
         "title" : "Company",
         "name" : "company",
         "type" : "foreign",
         "store" : "companies",
         "database" : "jobs",
-        "field" : "name"
+        "field" : "name",
+        "table" : true
       },{
         "title" : "Agent",
         "name" : "agent",
         "type" : "foreign",
         "store" : "agents",
         "database" : "jobs",
-        "field" : "name"
+        "field" : "name",
+        "table" : true
+      },{
+        "title" : "Site",
+        "name" : "site",
+        "type" : "foreign",
+        "store" : "sites",
+        "database" : "jobs",
+        "field" : "name",
+        "table" : true
+      },{
+        "title" : "Body",
+        "name" : "body",
+        "type" : "text"
       }]
     }]
   }]
